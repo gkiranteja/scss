@@ -1,0 +1,57 @@
+@import 'partials';
+$var-color: red;
+$var-padding: 12px;
+$var-margin: 10px 10px;
+.variables p {
+    font: 16px;
+    color: $var-color;
+    padding: $var-padding;
+    margin: $var-margin;
+}
+
+nav {
+    ul {
+        padding: 0px;
+        margin: 0px;
+        list-style-type: none;
+        li {
+            display: inline;
+            margin: $var-margin;
+        }
+        a {
+            color: red;
+            font-size: 16px;
+        }
+    }
+}
+
+@mixin border-radius($radius) {
+    -webkit-border-radius: $radius;
+    -moz-border-radius: $radius;
+    -ms-border-radius: $radius;
+    border-radius: $radius;
+}
+
+.button {
+    padding: 10px 10px;
+    margin: 10px;
+    background: #000;
+    color: #fff;
+}
+
+.jumbo-button {
+    @extend .button;
+    font-size: 16px;
+}
+
+.jumbo-button-btn {
+    @extend .button;
+    font-size: 20px;
+    @include border-radius(20px);
+}
+
+.operators {
+    border: 1px solid #ccc;
+    padding: $var-padding + 30;
+    width: 600px / 960px * 100%;
+}
